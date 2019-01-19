@@ -1,0 +1,26 @@
+{
+  "name": "liri",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dashinja/liri.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dashinja/liri/issues"
+  },
+  "homepage": "https://github.com/dashinja/liri#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "dotenv": "^6.2.0",
+    "moment": "^2.23.0",
+    "pnpm": "^2.25.2"
+  }
+}
