@@ -1,12 +1,12 @@
-# Liri
-Welcome to Liri!. 
+# Liri Assistant
+Welcome to Liri!
 This program is a command line application and all its features 
 are accessed via the command line. This project makes getting information
 about your favorite spotify song, movie, dates and venue location for concerts,
-and just some fun on the CLI quite assessible.
+and just some fun on the CLI quite accessible.
 
 ## Format to Access Application
-> node liri.js {command} [params]
+> `node liri.js [command] {params}`
 
 ## Commands:
   [movie]       - Searches OMDB for movie information
@@ -18,7 +18,7 @@ and just some fun on the CLI quite assessible.
   [doit]        - An easter egg of sorts, that reads pres-made commands from a text file to execute auto-magic-ally.
   
 ### Params:
-  [params]      - Params are what you're searching for. 
+  {params}      - Params are what you're searching for. 
   
 ### Example Usage:
 Concert Search for Evanescence
@@ -33,6 +33,6 @@ Movie Search for "Independence Day"
 Fun Random Search of my Choosing
 ![Random Search](https://i.gyazo.com/d112102524ab326d624daddd3991f835.png)
 
-You should try the "doit" command and see what you get - however, customizing the doit command is a developer only option for now.
+You should try the `doit` command and see what you get - however, customizing the doit command is a developer only option for now.
 
 Enjoy Liri!
