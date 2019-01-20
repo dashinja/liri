@@ -105,9 +105,9 @@ function concert() {
     .then(res => {
       body = res.data;
 
-      let titleResults = `${queryCLI} Concert Locations:`;
+      let titleResults = `${queryCLI}`;
       console.log(`${titleResults} Concert Locations:\n`);
-      writeToLog(`///////// ${titleResults} /////////`);
+      writeToLog(`///////// ${titleResults} Concert Locations: /////////`);
 
       for (let item in body) {
         const vName = body[item].venue.name;
@@ -129,12 +129,14 @@ function concert() {
 function doWhatItSays() {
   fs.readFile('./random.txt', 'utf8', (err, data) => {
     if (err) throw err;
-    let dataSplit = data.split('\n');
     let dataSplit10 = data.split(', ');
+    console.log(dataSplit10)
 
     for (let i = 0; i < dataSplit10.length; i += 2) {
       operation = dataSplit10[i];
+      queryCLI = dataSplit10[i + 1]
       process.argv[3] = dataSplit10[i + 1];
+      // console.log("Operator[operation]:", OPERATOR[operation])
       OPERATOR[operation]();
     }
   });
