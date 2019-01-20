@@ -177,37 +177,66 @@ function concert() {
     .catch(err => console.log('Sorry, no information found', err));
 }
 
-function doWhatItSays () {
-  fs.readFile("./random.txt", "utf8", (err, data) => {
+function doWhatItSays() {
+  fs.readFile('./random.txt', 'utf8', (err, data) => {
     if (err) throw err;
-    console.log("I'm raw data read:\r", data)
-    let dataSplit = data.split("\n")
+    console.log("I'm raw data read:\r", data);
+    let dataSplit = data.split('\n');
     // let dataSplit5 = dataSplit.split(", ")
-    let dataSplit10 = data.split(", ")
-    console.log("I'm data split", dataSplit)
+    let dataSplit10 = data.split(', ');
+    console.log("I'm data split", dataSplit);
     // console.log("I'm data split FIVE:", dataSplit5)
-    console.log("I'm data split TEN:", dataSplit10)
+    console.log("I'm data split TEN:", dataSplit10);
     // console.log("I'm normal data.split()", data.split())
 
     // let calmer = dataSplit10.filter((item) => item === "spotify"|| item === "concert"|| item === "movie")
     // console.log("I'm calmer:", calmer)
-operation = dataSplit10[0]
-console.log("I'm changed operation:", operation)
-queryCLI = dataSplit10[1]
-console.log("I'm changed queryCLI:", queryCLI, "\n")
-console.log("I'm length of datasplit10", dataSplit10.length)
-console.log("I'm length of datasplit10 minus one", dataSplit10.length-1, "\n")
-OPERATOR[operation]();
+    operation = dataSplit10[0];
+    console.log("I'm changed operation:", operation);
+    queryCLI = dataSplit10[1];
+    console.log("I'm changed queryCLI:", queryCLI, '\n');
+    console.log("I'm length of datasplit10", dataSplit10.length);
+    console.log(
+      "I'm length of datasplit10 minus one",
+      dataSplit10.length - 1,
+      '\n'
+    );
+    // OPERATOR[operation]();
+    let counter = 0;
+    let outerCounter = 0;
+    // let helperObject = {}
 
-    for (let i = 1; i <= dataSplit10.length; i+2) {
-      queryCLI = dataSplit10[i]
+    // for (let i; i < dataSplit10.length; i++) {
+    //   helperObject = {
+    //     dataSplit10[i]: dataSplit10[i+1],\n
+    //   }
+
+    // }
+    // console.log("I'm helper item:", helperObject)
+
+    // for (let i = 1; i < dataSplit10.length; i += 2) {
+    //   queryCLI = dataSplit10[i];
+    //   console.log("I'm querycli in loop lvl 1", queryCLI);
+    //   outerCounter++;
+    //   // console.log("I'm outer couter:", outerCounter, "\n");
+    //   for (let j = 0; j < i; j += 2) {
+    //     operation = dataSplit10[j];
+    //     console.log("I'm operation in loop lvl 2", operation);
+    //     // console.log('I should pair, querycli: ', queryCLI);
+    //     counter++;
+    //     // console.log('inner counter', counter, "\n\n");
+    //   }
+    //   OPERATOR[operation]()
+    // }
+
+    for (let i = 0; i < dataSplit10.length; i += 2) {
+      operation = dataSplit10[i];
+      console.log("I'm operation in loop lvl 1", operation)
+      queryCLI = dataSplit10[i + 1];
       console.log("I'm querycli in loop lvl 1", queryCLI)
-        for (let j = 0; j <= dataSplit10.length; j+2) {
-          operation = dataSplit[j]
-          console.log("I'm operation in loop lvl 2", operation)
-        }
-        OPERATOR[operation]()
+      console.log("OPERATOR[operation] contents:", OPERATOR[operation])
+      OPERATOR[operation]();
     }
-  })
+  });
 }
 OPERATOR[operation]();
