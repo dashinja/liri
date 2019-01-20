@@ -130,7 +130,7 @@ function doWhatItSays() {
   fs.readFile('./random.txt', 'utf8', (err, data) => {
     if (err) throw err;
     let dataSplit10 = data.split(', ');
-    console.log(dataSplit10)
+    // console.log(dataSplit10)
 
     for (let i = 0; i < dataSplit10.length; i += 2) {
       operation = dataSplit10[i];
