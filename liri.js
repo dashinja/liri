@@ -1,3 +1,5 @@
+//defaults need work
+
 // imports
 require('dotenv').config();
 const keys = require('./keys.js');
@@ -9,7 +11,7 @@ const fs = require('fs');
 // globals
 const spotify = new Spotify(keys.spotify);
 let operation = process.argv[2];
-let queryCLI = process.argv[3]
+let queryCLI = process.argv[3];
 
 //input handler
 const OPERATOR = {
@@ -149,9 +151,9 @@ function doWhatItSays() {
 
     for (let i = 0; i < dataSplit10.length; i += 2) {
       operation = dataSplit10[i];
-      console.log("I'm operation now:", operation)
+      console.log("I'm operation now:", operation);
       queryCLI = dataSplit10[i + 1];
-      console.log("I'm querycli now:", queryCLI)
+      console.log("I'm querycli now:", queryCLI);
       OPERATOR[operation]();
     }
   });
