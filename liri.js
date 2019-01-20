@@ -10,6 +10,8 @@ const fs = require('fs');
 
 // globals
 const spotify = new Spotify(keys.spotify);
+const omdb = process.env.OMDB_ID;
+const BIT = process.env.BIT_ID;
 let operation = process.argv[2];
 let queryCLI = process.argv[3];
 
@@ -24,13 +26,11 @@ const OPERATOR = {
 // all the things (functions)
 
 function movie() {
-  const MOVIE_API_KEY = `15486eac`;
-
   // if (process.argv[3] === undefined) {
   //   queryCLI = process.argv[3];
   // }
   queryCLI = process.argv[3];
-  let queryURL = `http://www.omdbapi.com/?apikey=${MOVIE_API_KEY}&t=${queryCLI}`;
+  let queryURL = `http://www.omdbapi.com/?apikey=${omdb}&t=${queryCLI}`;
 
   axios
     .get(queryURL)
@@ -100,7 +100,7 @@ function spotifySearch() {
 function concert() {
   axios
     .get(
-      `https://rest.bandsintown.com/artists/${queryCLI}/events?app_id=codingbootcamp&date=upcoming`
+      `https://rest.bandsintown.com/artists/${queryCLI}/events?app_id=${BIT}&date=upcoming`
     )
     .then(res => {
       body = res.data;
@@ -134,7 +134,7 @@ function doWhatItSays() {
 
     for (let i = 0; i < dataSplit10.length; i += 2) {
       operation = dataSplit10[i];
-      queryCLI = dataSplit10[i + 1]
+      queryCLI = dataSplit10[i + 1];
       process.argv[3] = dataSplit10[i + 1];
       // console.log("Operator[operation]:", OPERATOR[operation])
       OPERATOR[operation]();
