@@ -1,37 +1,38 @@
-## Welcome to GitHub Pages
+# Liri
+Welcome to Liri!. 
+This program is a command line application and all its features 
+are accessed via the command line. This project makes getting information
+about your favorite spotify song, movie, dates and venue location for concerts,
+and just some fun on the CLI quite assessible.
 
-You can use the [editor on GitHub](https://github.com/dashinja/liri/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+## Format to Access Application
+> node liri.js {command} [params]
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Commands:
+  [movie]       - Searches OMDB for movie information
+  
+  [spotify]     - Searches spotify for song information
+  
+  [concert]     - Searches for upcoming concert dates and locations
+  
+  [doit]        - An easter egg of sorts, that reads pres-made commands from a text file to execute auto-magic-ally.
+  
+### Params:
+  [params]      - Params are what you're searching for. 
+  
+### Example Usage:
+Concert Search for Evanescence
+![Concert Search for Evanescence](https://i.gyazo.com/356b666ee20c0c39d8238a48dc144bb3.png)
 
-### Markdown
+Song Search for "Not Dead Yet"
+![Song Search for "Not Dead Yet"](https://i.gyazo.com/f0fda505757cdb032863f7aa8fdc6b6c.png)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Movie Search for "Independence Day"
+![Movie Search for "Independence Day"](https://i.gyazo.com/60daf8c5912d7f782bf90cda0415ef2e.png)
 
-```markdown
-Syntax highlighted code block
+Fun Random Search of my Choosing
+![Random Search](https://i.gyazo.com/d112102524ab326d624daddd3991f835.png)
 
-# Header 1
-## Header 2
-### Header 3
+You should try the "doit" command and see what you get - however, customizing the doit command is a developer only option for now.
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/dashinja/liri/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Enjoy Liri!
