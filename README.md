@@ -35,4 +35,12 @@ Fun Random Search of my Choosing
 
 You should try the `doit` command and see what you get - however, customizing the doit command is a developer only option for now.
 
+### See Liri In Action:
+![Liri in action, still photo](https://i.gyazo.com/da03a5d72c495517785dae2c4d63a66e.png)
+[Click Here to Watch Liri Go!](https://www.youtube.com/watch?v=CAaZlTsK_Yc&feature=youtu.be)
+
+### Troubleshooting:
+If Liri ever does something you don't want - put her in her place and check the ```log.txt``` file.
+The results history is contained there in the root folder of the project.
+
 Enjoy Liri!
