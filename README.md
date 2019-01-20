@@ -18,7 +18,7 @@ and just some fun on the CLI quite accessible.
   [doit]        - An easter egg of sorts, that reads pres-made commands from a text file to execute auto-magic-ally.
   
 ### Params:
-  {params}      - Params are what you're searching for. 
+  {params}      - These are the parameters you're searching for (all the Star Wars fans can laugh here). 
   
 ### Example Usage:
 Concert Search for Evanescence
