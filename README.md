@@ -15,7 +15,7 @@ and just some fun on the CLI quite accessible.
   
   [concert]     - Searches for upcoming concert dates and locations
   
-  [doit]        - An easter egg of sorts, that reads pres-made commands from a text file to execute auto-magic-ally.
+  [doit]        - An easter egg of sorts, that reads pre-made commands from a text file to execute auto-magic-ally.
   
 ### Params:
   {params}      - These are the parameters you're searching for (all the Star Wars fans can laugh here). 
